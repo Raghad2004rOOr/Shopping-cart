@@ -18,7 +18,7 @@ theme_btn.onclick = () => {
 
     localStorage.setItem("theme", theme); 
 
-    if (newTheme === "dark") {
+    if (theme === "dark") {
         theme_icon.className = "fa-solid fa-moon";
     } else {
         theme_icon.className = "fa-regular fa-sun";

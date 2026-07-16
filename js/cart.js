@@ -18,7 +18,7 @@ theme_btn.onclick = () => {
 
     localStorage.setItem("theme", theme); 
 
-    if (newTheme === "dark") {
+    if (theme === "dark") {
         theme_icon.className = "fa-solid fa-moon";
     } else {
         theme_icon.className = "fa-regular fa-sun";
@@ -28,13 +28,13 @@ theme_btn.onclick = () => {
 let cart = JSON.parse(localStorage.getItem("shopping_cart")) || [];
 
 function displayCartItems() {
-    const item = document.querySelector(".cart-items");
+    const container = document.querySelector(".cart-items");
     const totalPriceElement = document.querySelector(".total-price");
     
-    item.innerHTML = ""; 
+    container.innerHTML = ""; 
 
     if (cart.length === 0) {
-        item.innerHTML = `
+        container.innerHTML = `
             <div class="text-center py-12 text-gray-500 dark:text-gray-400">
                 <p class="text-xl mb-4">سلة المشتريات فارغة حالياً</p>
                 <a href="index.html" class="text-[#9238FF] hover:underline font-semibold">اضغط هنا لإضافة منتجات للمتجر</a>
@@ -87,10 +87,10 @@ function displayCartItems() {
 
             </div>
         `;
-        item.appendChild(row);
+        container.appendChild(row);
     });
 
-    totalPriceElement.textContent = totalCartPrice;
+    totalPriceElement.textContent = total;
 }
 
 function removeItem(index) {
@@ -110,7 +110,7 @@ function clearCart() {
         localStorage.removeItem("shopping_cart");
         displayCartItems();
     }
-    
+
 }
 
 function checkout() {
