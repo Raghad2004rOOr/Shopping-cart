@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجري الرقمي - سلة المشتريات</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-white text-gray-800 dark:bg-gray-950 dark:text-gray-100 transition-colors duration-300">
+
+    <nav class="bg-slate-50 dark:bg-gray-900 shadow-md p-4 mb-8 transition-colors duration-300">
+        <div class="container mx-auto flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-[#9238FF]">سلة المشتريات</h1>
+            <div class="flex gap-3 items-center">
+                <a href="index.html" class="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 px-4 py-2 rounded-lg transition font-semibold">العودة للمتجر ←</a>
+                <button class="theme w-10 h-10 flex items-center justify-center text-violet-600 bg-violet-100 dark:bg-violet-600 dark:text-white cursor-pointer rounded-xl transition duration-300 text-lg shadow-sm">
+                    <i class="fa-regular fa-sun theme-icon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container mx-auto px-4 max-w-4xl">
+        <div class="bg-white dark:bg-gray-800 rounded-xl shadow-md p-6 border border-gray-100 dark:border-gray-700 transition-colors duration-300">
+            <div class="cart-items divide-y divide-gray-100 dark:divide-gray-700">
+                </div>
+
+            <div class="mt-8 pt-6 border-t border-gray-100 dark:border-gray-700 flex flex-col sm:flex-row justify-between items-center gap-4">
+                <div class="text-lg font-bold">
+                    الإجمالي الكلي: <span class="total-price text-[#9238FF]">0</span> شيكل
+                </div>
+                <div class="flex gap-4">
+                    <button onclick="clearCart()" class="bg-red-500 hover:bg-red-600 text-white font-bold px-6 py-2 rounded-lg transition">
+                        تفريغ السلة
+                    </button>
+                    <button onclick="checkout()" class="bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-2 rounded-lg transition">
+                        إتمام الشراء
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/cart.js"></script>
+</body>
+</html>
