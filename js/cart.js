@@ -110,6 +110,7 @@ function clearCart() {
         localStorage.removeItem("shopping_cart");
         displayCartItems();
     }
+    
 }
 
 function checkout() {
